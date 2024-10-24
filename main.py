@@ -1,16 +1,41 @@
-# This is a sample Python script.
+# Inicializacion de las variblaes opcion y salir. Nos permite seleccionar el modo y salir cuando el usuario diga.
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+opcion = 0
+salir = 5
+
+# Elecciones para jugar
+
+while opcion != salir:
+    print("1 - Wordle")
+    print("2 - Tablas")
+    print("3 - Carreras dados")
+    print("4 - Lenguaje simbolico")
+    print("5 - Salir ")
+    opcion =  int(input("Ingrese una opcion : "))
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# Dentro de cada funcion deberia estar desarrolado su codigo del videojuego/herramienta
+# A su vez cada funcion debera contar con un bucle para permanecer en el juego hasta que el usuario
+# quiera salir al menu principal
 
+    def Wordle():
+        print("Wordle")
+    def Tablas():
+        print("Tablas")
+    def Carreras():
+        print("Carreras")
+    def lenguaje():
+        print("Lenguaje")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    if opcion == 1:
+        Wordle()
+    elif opcion == 2:
+        Tablas()
+    elif opcion == 3:
+        Carreras()
+    elif opcion == 4:
+        lenguaje()
+    elif opcion == 5:
+        print("Saliendo... Muchas gracias por jugar")
+    else:
+        print("No eligio una opcion correcta ")
