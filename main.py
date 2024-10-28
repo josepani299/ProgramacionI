@@ -23,8 +23,6 @@ while opcion != salir:
     def Wordle():
         print("Wordle")
 
-
-
     # Parte de tablas
     def Tablas():
 
@@ -49,8 +47,8 @@ while opcion != salir:
             print("\n")
             Tablas()
         def juego():
-            salir = False
-            while salir == False :
+            salir = True
+            while salir:
                 vidas = 3
                 racha = 0
                 while vidas > 0:
@@ -67,9 +65,9 @@ while opcion != salir:
                 decision = str(input("Quiere volver a jugar? Ingrese si o no"))
                 decision.lower()
                 if decision == "si":
-                    salir = False
-                elif decision == "no":
                     salir = True
+                elif decision == "no":
+                    salir = False
                 else:
                     print("Error en respuesta. Solo se reciben  si o no como respuestas")
 
@@ -84,6 +82,8 @@ while opcion != salir:
         print("Carreras")
     def lenguaje():
         print("Lenguaje")
+
+    # Menu principal
 
     if opcion == 1:
         Wordle()
