@@ -39,5 +39,3 @@ while opcion != salir:
         print("Saliendo... Muchas gracias por jugar")
     else:
         print("No eligio una opcion correcta ")
-
-print("Ahora sí")
