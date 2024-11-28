@@ -173,7 +173,51 @@ def programa():
                 decision()
             decision()
         def Carreras():
-            print("Carreras")
+            print("!!!!!CARRERA DE DADOS!!!!!")
+            print("EL PRIMERO EN LLEGAR A 20 PUNTOS EN MENOS MOVIMINETOS GANA")
+            print("BUENA SUERTE")
+            nombre1 = str(input("Ingrese nombre jugador 1: "))
+            nombre2 = str(input("Ingrese nombre jugador 2: "))
+            tirada1 = 0
+            tirada2 = 0
+            puntos1 = 0
+            puntos2 = 0
+
+            import random
+
+            while puntos1 <= 20 and puntos2 <= 20:
+                input(f"{nombre1} presiona ENTER para lanzar el dado.")
+                dado = random.randint(1, 6)
+                puntos1 += dado
+                print("CARA DEL DADO", dado)
+                tirada1 += 1
+                print(f"{nombre1} saco {puntos1} puntos en {tirada1} movimientos.  ")
+
+                if puntos1 >= 20:
+                    break
+
+                input(f"{nombre2} presiona ENTER para lanzar el dado.")
+                dado = random.randint(1, 6)
+                print("CARA DEL DADO", dado)
+                puntos2 += dado
+                tirada2 += 1
+                print(f"{nombre2} saco {puntos2} puntos en {tirada2} movimientos.  ")
+
+                if puntos2 >= 20:
+                    break
+
+            if puntos1 >= 20 and puntos2 >= 20:
+                if tirada1 < tirada2:
+                    print(f"Gana {nombre1} FELICITACIONES!!!!")
+                elif tirada2 < tirada1:
+                    print(f"Gana {nombre2} FELICIACIONES!!!!")
+                else:
+                    print("EMPATE")
+            elif puntos1 >= 20:
+                print(f"{nombre1} gana en {[tirada1]}")
+
+            else:
+                print(f"{nombre2} gana en {[tirada2]}")
         def Transcriptomania():
             # TRANSCRIPTOMANIA
 
